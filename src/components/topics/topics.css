@@ -1,0 +1,8 @@
+.topic-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.topic-container img{
+    width: 250px;
+}
