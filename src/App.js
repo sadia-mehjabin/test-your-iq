@@ -16,7 +16,6 @@ function App() {
       children: [
         {
           path:'/',
-         
           element:<Home></Home>
         },
         {
@@ -31,7 +30,7 @@ function App() {
         {
           path:'/blog',
           element:<Blog></Blog>
-        },
+        }
       ]
     }
   ])
