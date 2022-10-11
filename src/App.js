@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Statistics from './components/statistics/Statistics';
 import Topics from './components/topics/Topics';
 import Blog from './components/blog/Blog';
+import Quiz from './components/quiz/Quiz';
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
         {
           path:'/blog',
           element:<Blog></Blog>
+        },
+        {
+          path:'/quiz',
+          element: <Quiz></Quiz>
         }
       ]
     }

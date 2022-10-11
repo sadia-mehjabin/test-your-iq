@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import Topics from '../topics/Topics';
 import img from './gettyimages-1200298816-170667a.jpg'
 const Home = () => {
     // console.log(img)

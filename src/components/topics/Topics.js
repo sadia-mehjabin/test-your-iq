@@ -6,7 +6,6 @@ import './topics.css'
 const Topics = () => {
     const topics = useLoaderData();
     const topicArray = topics.data;
-    console.log(topicArray)
     return (
         <div className='topic-container'>
             {
