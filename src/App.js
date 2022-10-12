@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './components/layout/Main';
@@ -7,6 +7,7 @@ import Statistics from './components/statistics/Statistics';
 import Topics from './components/topics/Topics';
 import Blog from './components/blog/Blog';
 import Quiz from './components/quiz/Quiz';
+import TopicsDataLoader from './components/topicsDataLoader/TopicsDataLoader';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         },
         {
           path:'/statistics',
+          loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz'),
           element:<Statistics></Statistics>
         },
         {
@@ -34,8 +36,18 @@ function App() {
         },
         {
           path:'/quiz',
+          loader: async ({params}) => {
+            fetch(`https://openapi.programming-hero.com/api/quiz/${params}`)
+            console.log(params)
+          },
           element: <Quiz></Quiz>
-        }
+        },
+        {
+          path:'',
+          
+          element: <TopicsDataLoader></TopicsDataLoader>
+        },
+        
       ]
     }
   ])

@@ -5,7 +5,12 @@ import './topics.css'
 
 const Topics = () => {
     const topics = useLoaderData();
+    
+ 
     const topicArray = topics.data;
+    const id = 1;
+    // const dataLoader = useLoaderData({id});
+    //    console.log(dataLoader)
     return (
         <div className='topic-container'>
             {
