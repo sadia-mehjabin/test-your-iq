@@ -8,6 +8,7 @@ import Topics from './components/topics/Topics';
 import Blog from './components/blog/Blog';
 import Quiz from './components/quiz/Quiz';
 import TopicsDataLoader from './components/topicsDataLoader/TopicsDataLoader';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 
 
 function App() {
@@ -35,10 +36,10 @@ function App() {
           element:<Blog></Blog>
         },
         {
-          path:'/quiz',
+          path:'/quiz/:id',
           loader: async ({params}) => {
-            fetch(`https://openapi.programming-hero.com/api/quiz/${params}`)
-            console.log(params)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+            
           },
           element: <Quiz></Quiz>
         },
@@ -47,7 +48,10 @@ function App() {
           
           element: <TopicsDataLoader></TopicsDataLoader>
         },
-        
+        {
+          path: '*',
+          element: <PageNotFound></PageNotFound>
+        }
       ]
     }
   ])

@@ -32,8 +32,9 @@ const TopicsDataLoader = ({topic}) => {
             <img src={logo} alt="" />
             <h2>{name}</h2>
            {/* <Link to={`/Quiz/${id}`}>  */}
-           <button onClick={()=>idHandlerButton()}>Practice Now</button>
+           {/* <button onClick={()=>idHandlerButton()}>Practice Now</button> */}
            {/* </Link> */}
+           <Link to={`/quiz/${id}`}>Practice</Link>
             <p>Total Quizes : {total} </p>
             
         </div>
